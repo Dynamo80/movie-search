@@ -6,8 +6,10 @@ function Movie( { movie } ) {
   return (
     <div className="movie-card">
       <img src={movie.Poster} alt={movie.Title} />
+      <div className="card-content">
       <h2>{movie.Title}</h2>
-      <p>{movie.Year}</p>
+      <p>Year: {movie.Year}</p>
+      </div>
     </div>
   );
 }
@@ -15,7 +17,7 @@ function Movie( { movie } ) {
 function App() {
   const [search, setSearch] = useState('')
   const [movies, setMovies] = useState([])
-  const apiKey = 'a39e780'
+  const apiKey = 'your_api_key_here'
 
   const fetchMovies = async () => {
     if ((!search.trim())) return;
