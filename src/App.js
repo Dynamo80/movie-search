@@ -17,7 +17,7 @@ function Movie( { movie } ) {
 function App() {
   const [search, setSearch] = useState('')
   const [movies, setMovies] = useState([])
-  const apiKey = 'a39e780'
+  const apiKey = 'your_api_key'
 
   const fetchMovies = async () => {
     if ((!search.trim())) return;
